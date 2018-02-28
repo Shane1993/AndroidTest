@@ -22,6 +22,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 import com.lzs.androidtest.dagger.DaggerActivity;
+import com.lzs.androidtest.rxjava.RxActivity;
 import com.lzs.androidtest.utils.PathResolver;
 
 import java.net.URISyntaxException;
@@ -51,6 +52,7 @@ public class MainActivity extends BaseActivity {
 
         btnDagger.setOnClickListener(v -> {this.goActivity(this, DaggerActivity.class);});
 
+        findViewById(R.id.btn_rx).setOnClickListener(v -> this.goActivity(this, RxActivity.class));
 
     }
 
