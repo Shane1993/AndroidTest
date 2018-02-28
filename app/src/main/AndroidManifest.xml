@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".FilePickerActivity"/>
         <activity android:name=".rxjava.RxActivity"/>
+        <activity android:name=".rxjava.RxActivity"/>
     </application>
 
 </manifest>

@@ -51,6 +51,7 @@ public class RxActivity extends Activity {
 
         findViewById(R.id.btn_test4).setOnClickListener(v -> test4());
         findViewById(R.id.btn_test5).setOnClickListener(v -> test5());
+        findViewById(R.id.btn_test6).setOnClickListener(v -> test6());
     }
 
     Observable observable1;
@@ -212,6 +213,29 @@ public class RxActivity extends Activity {
                         Log.d(TAG, "accept" + s);
                     }
                 });
+
+    }
+
+    /**
+     * 测试compose和ObservableTransformer
+     */
+    private void test6() {
+        int res = R.mipmap.ic_launcher_round;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Observable.just(res).map(id -> {
+
+                Log.d(TAG, "subscribeOn " + Thread.currentThread().getName());
+                return RxActivity.this.getDrawable(id);
+            })
+                    .compose(RxUtil.schedulers())
+                    .subscribe(d ->
+                    {
+
+                        Log.d(TAG, "observeOn " + Thread.currentThread().getName());
+                        img1.setImageDrawable(d);
+                    });
+        }
+
 
     }
 

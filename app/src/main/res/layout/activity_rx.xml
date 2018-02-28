@@ -34,6 +34,12 @@
         android:layout_height="wrap_content"
         android:text="flatMap"
         />
+    <Button
+        android:id="@+id/btn_test6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="compose Transformer"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
