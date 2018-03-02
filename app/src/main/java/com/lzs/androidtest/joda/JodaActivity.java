@@ -126,6 +126,7 @@ public class JodaActivity extends BaseActivity{
      *  关于使用DateTime还是LocalDateTime
      *      如果是根据毫秒值来进行时间的转换，那么可以直接使用DateTime
      *      但是涉及到使用now()来获取时间时，最好是使用LocalDateTime
+     *   同时，DateTime拥有的方法比较多，比如getMillis()等等
      */
     private void test4() {
         Log.d("LocalDate", LocalDate.now().toString());

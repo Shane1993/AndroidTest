@@ -25,6 +25,7 @@ import com.lzs.androidtest.dagger.DaggerActivity;
 import com.lzs.androidtest.eventbus.EventActivity_1;
 import com.lzs.androidtest.joda.JodaActivity;
 import com.lzs.androidtest.rxjava.RxActivity;
+import com.lzs.androidtest.timer.TimerActivity;
 import com.lzs.androidtest.utils.PathResolver;
 
 import java.net.URISyntaxException;
@@ -59,6 +60,9 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn_eventnbus).setOnClickListener(v -> this.goActivity(this, EventActivity_1.class));
 
         fv(R.id.btn_joda).setOnClickListener(v -> this.goActivity(this, JodaActivity.class));
+
+        fv(R.id.btn_timer).setOnClickListener(v -> this.goActivity(this, TimerActivity.class));
+
     }
 
 

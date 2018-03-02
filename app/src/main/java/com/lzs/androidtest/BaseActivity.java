@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 /**
@@ -12,6 +13,7 @@ import android.view.View;
  */
 
 public class BaseActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,5 +26,13 @@ public class BaseActivity extends AppCompatActivity {
 
     protected View fv(int id) {
         return this.findViewById(id);
+    }
+
+    protected void p(String title, String msg) {
+        Log.d(title, msg);
+    }
+
+    protected void p(String msg) {
+        p(">>>>>>>>>>>", msg);
     }
 }
