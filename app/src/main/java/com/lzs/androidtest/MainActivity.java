@@ -23,6 +23,7 @@ import android.widget.Button;
 
 import com.lzs.androidtest.dagger.DaggerActivity;
 import com.lzs.androidtest.eventbus.EventActivity_1;
+import com.lzs.androidtest.joda.JodaActivity;
 import com.lzs.androidtest.rxjava.RxActivity;
 import com.lzs.androidtest.utils.PathResolver;
 
@@ -56,6 +57,8 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn_rx).setOnClickListener(v -> this.goActivity(this, RxActivity.class));
 
         findViewById(R.id.btn_eventnbus).setOnClickListener(v -> this.goActivity(this, EventActivity_1.class));
+
+        fv(R.id.btn_joda).setOnClickListener(v -> this.goActivity(this, JodaActivity.class));
     }
 
 

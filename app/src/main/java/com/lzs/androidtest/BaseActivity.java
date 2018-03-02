@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 /**
  * Created by LEE on 2018/2/26.
@@ -19,5 +20,9 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void goActivity(Context context, Class cls) {
         this.startActivity(new Intent(context, cls));
+    }
+
+    protected View fv(int id) {
+        return this.findViewById(id);
     }
 }
