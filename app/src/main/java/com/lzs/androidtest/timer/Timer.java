@@ -85,14 +85,9 @@ public class Timer {
         timer.cancel();
     }
 
-    public void reset() {
-        cancel();
-        timer.onTick(-1L);
-    }
-
     // 直接触发onTick方法
     public void onTick(long count) {
-        timer.onTick(count);
+        timer.onTick(count - 1);
     }
 
 

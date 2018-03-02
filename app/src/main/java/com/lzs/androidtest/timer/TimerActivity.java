@@ -34,27 +34,10 @@ public class TimerActivity extends BaseActivity {
         long timeLeft = time1.getMillis() - time2.getMillis();
 
         // timer的作用是作为定时器
-        timer = new Timer(timeLeft, Timer.MINUTE, new Timer.TimerCallback() {
+        timer = new Timer(5000, Timer.SECOND, new Timer.TimerCallback() {
             @Override
             public void onTick(long time) {
-                tvTime.setText(String.valueOf(time) + " minutes left");
-
-                if (time == 1) {
-                    timer.cancel();
-                    timer = new Timer(60000, Timer.SECOND, new Timer.TimerCallback() {
-                        @Override
-                        public void onTick(long time) {
-                            tvTime.setText(String.valueOf(time) + " seconds left");
-
-                        }
-
-                        @Override
-                        public void onFinish() {
-                            tvTime.setText("时间到");
-                        }
-                    });
-                    timer.start();
-                }
+                tvTime.setText(String.valueOf(time) + " seconds left");
             }
 
             @Override
@@ -65,7 +48,6 @@ public class TimerActivity extends BaseActivity {
 
         fv(R.id.btn_timer_start).setOnClickListener(v -> start());
         fv(R.id.btn_timer_pause).setOnClickListener(v -> pause());
-        fv(R.id.btn_timer_reset).setOnClickListener(v -> reset());
         fv(R.id.btn_timer_resume).setOnClickListener(v -> resume());
     }
 
@@ -81,9 +63,6 @@ public class TimerActivity extends BaseActivity {
         timer.onTick(5000); // 直接触发onTick方法
     }
 
-    private void reset() {
-        timer.reset(); // 直接停止计数，没有触发什么方法
-    }
 
 
 }
