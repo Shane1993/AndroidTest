@@ -9,24 +9,23 @@ import java.util.concurrent.TimeUnit;
  *  定时器工具类
  *      可用于倒计时
  *      使用方法可参考main方法
+ *      public static void main(String[] args) {
+             Timer timer = new Timer(6000, 1000, new TimerCallback() {
+                @Override
+                public void onTick(long time) {
+                    System.out.println(String.valueOf(time));
+                }
+
+                @Override
+                public void onFinish() {
+                    System.out.println("时间到");
+                }
+             });
+             timer.start();
  */
 
 public class Timer {
 
-/*    public static void main(String[] args) {
-        Timer timer = new Timer(6000, 1000, new TimerCallback() {
-            @Override
-            public void onTick(long time) {
-                System.out.println(String.valueOf(time));
-            }
-
-            @Override
-            public void onFinish() {
-                System.out.println("时间到");
-            }
-        });
-        timer.start();
-    }*/
 
     public static final int SECOND = 0;
     public static final int MINUTE = 1;

@@ -27,6 +27,7 @@
         <activity android:name=".eventbus.EventActivity_2"/>
         <activity android:name=".joda.JodaActivity"/>
         <activity android:name=".timer.TimerActivity"/>
+        <activity android:name=".dialog.DialogActivity"/>
     </application>
 
 </manifest>
