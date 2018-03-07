@@ -4,60 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lzs.androidtest.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.lzs.androidtest.MainActivity">
 
-    <Button
-        android:id="@+id/btn_pick"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PICK FILE"
-        />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_dagger"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dagger"
-        />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_rx"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RxJava"
-        />
 
-    <Button
-        android:id="@+id/btn_eventnbus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EventBus"
-        />
-    <Button
-        android:id="@+id/btn_joda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Joda"
-        />
-    <Button
-        android:id="@+id/btn_timer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Timer"
-        />
-    <Button
-        android:id="@+id/btn_dialog"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Dialog"
-        />
+        <Button
+            android:id="@+id/btn_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PICK FILE"
+            />
 
-    <ImageView
-        android:id="@+id/iv_test"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src="@mipmap/ic_launcher"
-        />
+        <Button
+            android:id="@+id/btn_dagger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dagger"
+            />
+
+        <Button
+            android:id="@+id/btn_rx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RxJava"
+            />
+
+        <Button
+            android:id="@+id/btn_eventnbus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus"
+            />
+
+        <Button
+            android:id="@+id/btn_joda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Joda"
+            />
+
+        <Button
+            android:id="@+id/btn_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Timer"
+            />
+
+        <Button
+            android:id="@+id/btn_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dialog"
+            />
+
+        <Button
+            android:id="@+id/btn_picasso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Picasso"
+            />
+
+        <ImageView
+            android:id="@+id/iv_test"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@mipmap/ic_launcher"
+            />
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
