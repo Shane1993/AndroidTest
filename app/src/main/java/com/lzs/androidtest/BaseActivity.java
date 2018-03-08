@@ -33,6 +33,6 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void p(String msg) {
-        p(">>>>>>>>>>>", msg);
+        p(">>>>>>>>>>><<<<<<<<<<<<<<<<<", msg);
     }
 }

@@ -26,6 +26,7 @@ import com.lzs.androidtest.dialog.DialogActivity;
 import com.lzs.androidtest.eventbus.EventActivity_1;
 import com.lzs.androidtest.joda.JodaActivity;
 import com.lzs.androidtest.picasso.PicassoActivity;
+import com.lzs.androidtest.rxdownload.DownloadActivity;
 import com.lzs.androidtest.rxjava.RxActivity;
 import com.lzs.androidtest.timer.TimerActivity;
 import com.lzs.androidtest.utils.PathResolver;
@@ -70,8 +71,7 @@ public class MainActivity extends BaseActivity {
 
         fv(R.id.btn_picasso).setOnClickListener(v -> this.goActivity(this, PicassoActivity.class));
 
-        fv(R.id.iv_test).setOnClickListener(v -> ToastUtil.l(this, "离开好几个老家伙管理局"));
-
+        fv(R.id.btn_download).setOnClickListener(v -> this.goActivity(this, DownloadActivity.class));
 
     }
 

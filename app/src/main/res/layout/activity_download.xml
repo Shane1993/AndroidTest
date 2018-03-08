@@ -3,32 +3,48 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <Button
-        android:id="@+id/btn_go"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="go"
-        />
 
     <TextView
-        android:id="@+id/tv_text"
+        android:id="@+id/tv_download_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="default"
         />
 
+
     <Button
-        android:id="@+id/btn_eventbus_send_event"
+        android:id="@+id/btn_download_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send event"
+        android:text="test1"
         />
 
     <Button
-        android:id="@+id/btn_eventbus_send_stikyevent"
+        android:id="@+id/btn_download_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send StikySevent"
+        android:text="test2"
+        />
+
+    <Button
+        android:id="@+id/btn_download_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tes3"
+        />
+
+    <Button
+        android:id="@+id/btn_download_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test4"
+        />
+
+    <Button
+        android:id="@+id/btn_download_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="test5"
         />
 
 </LinearLayout>

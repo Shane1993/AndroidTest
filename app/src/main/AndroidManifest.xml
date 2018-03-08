@@ -32,6 +32,7 @@
         <activity android:name=".dialog.DialogActivity"/>
         <activity android:name=".ConstraintActivity"/>
         <activity android:name=".picasso.PicassoActivity"/>
+        <activity android:name=".rxdownload.DownloadActivity"/>
     </application>
 
 </manifest>

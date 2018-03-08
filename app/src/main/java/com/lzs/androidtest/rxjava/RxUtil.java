@@ -1,6 +1,10 @@
 package com.lzs.androidtest.rxjava;
 
 
+import org.reactivestreams.Publisher;
+
+import io.reactivex.Flowable;
+import io.reactivex.FlowableTransformer;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
@@ -12,6 +16,7 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class RxUtil {
+
     public static <T> ObservableTransformer<T, T> schedulers() {
         return new ObservableTransformer<T, T>() {
             @Override

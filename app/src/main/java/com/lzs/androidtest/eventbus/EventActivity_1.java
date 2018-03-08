@@ -26,6 +26,14 @@ public class EventActivity_1 extends BaseActivity {
         EventBus.getDefault().register(this);
 
         findViewById(R.id.btn_go).setOnClickListener(v -> goActivity(this, EventActivity_2.class));
+
+        fv(R.id.btn_eventbus_send_event).setOnClickListener(v -> {
+            sendEvent(new TextEvent(123, "OrdinaryEvent"));
+        });
+
+        fv(R.id.btn_eventbus_send_stikyevent).setOnClickListener(v -> {
+            sendStikyEvent(new TextEvent(789, "StikyEvent"));
+        });
     }
 
     @Override
@@ -39,4 +47,13 @@ public class EventActivity_1 extends BaseActivity {
         Log.d("receiveEvent", event.toString());
         ((TextView)findViewById(R.id.tv_text)).setText(event.toString());
     }
+
+    private void sendEvent(TextEvent msg) {
+        EventManager.testEvent(msg);
+    }
+
+    private void sendStikyEvent(TextEvent msg) {
+        EventBus.getDefault().postSticky(msg);
+    }
+
 }

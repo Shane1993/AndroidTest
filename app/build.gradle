@@ -56,4 +56,12 @@ dependencies {
     compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
 
 
+    // RxDownload
+    implementation('zlc.season:rxdownload3:1.2.0') {
+        exclude group: 'junit'
+        exclude group: "com.squareup.okhttp3"
+        exclude group: "com.squareup.retrofit2", module: "retrofit"
+        exclude group: "com.squareup.retrofit2", module: "converter-gson"
+        exclude group: "io.reactivex.rxjava2"
+    }
 }
